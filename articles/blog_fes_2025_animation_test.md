@@ -188,5 +188,3 @@ test("サイドバーが正しく開閉すること", async ({ page }) => {
 
 [^1]: https://developer.mozilla.org/ja/docs/Web/API/setTimeout
 [^2]: https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function/cubic-bezier
-
-deploy error test
