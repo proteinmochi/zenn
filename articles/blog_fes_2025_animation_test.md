@@ -2,7 +2,7 @@
 title: "アニメーションのフレームをテストしない。その理由を解説します。"
 emoji: "🎬"
 type: "tech"
-topics: ["frontend test", "UI test", "CybozuSummerBlogFes2025"]
+topics: ["test", "frontend", "CybozuSummerBlogFes2025"]
 published: false
 publication_name: "cybozu_frontend"
 ---
