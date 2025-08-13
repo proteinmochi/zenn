@@ -2,7 +2,7 @@
 title: "アニメーションのフレームをテストしない。その理由を解説します。"
 emoji: "🎬"
 type: "tech"
-topics: ["test", "frontend", "CybozuSummerBlogFes2025"]
+topics: ["test", "frontend", "cybozublogfes"]
 published: false
 publication_name: "cybozu_frontend"
 ---
@@ -77,14 +77,14 @@ MDN の`setTimeout`のドキュメントにも、この遅延の可能性につ�
 
 既存のテストコードは過度に具体的な値に縛られています。つまりは、保守性の地獄が生じてしまうのです。テストを「修正」するには、すべてのアサーションを再計算し、更新しなければなりません。
 
-さらには、`cubot-bezier`関数のような複雑な計算法を活用する場合は、CSS の移動経路をフレーム単位で未来予知するために、以下のようにテストコード内に関数を**再実装**する必要が生じます。想像するだけでゾッとしますね。
+さらには、`cubic-bezier`関数のような複雑な計算法を活用する場合は、CSS の移動経路をフレーム単位で未来予知するために、以下のようにテストコード内に関数を**再実装**する必要が生じます。想像するだけでゾッとしますね。
 
 ```javascript
 // style-predictor.js
 import { myPerfectCubicBezier } from './browser-easing-reimplementation.js';
 
 function getCorrectStyleForMillisecond(t) {
-  // ...ここにあなたの完璧なcubic-bezierロジックを...
+  // ...ここに完璧なcubic-bezier関数のロジックを...
   const exactValue = /*...多くの美しい数式... */;
   return { transform: `translateX(${exactValue.toFixed(4)}px)` };
 }
